@@ -1,0 +1,20 @@
+body  {
+    background-image: url('https://d2c87l0yth4zbw-2.global.ssl.fastly.net/i/generic/hero-lg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
+    background-size: cover;
+  }
+
+#screen{
+    width: 600px;
+    margin-top: 50px;
+    margin-left: 50px;
+    border-radius: 10px;
+    padding: 30px;
+
+}
+
+.button{
+    margin-left: 10px; 
+}
