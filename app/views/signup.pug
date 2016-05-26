@@ -4,11 +4,11 @@ html(lang='en')
   head
     meta(charset='utf-8')
   // style by myself
-  link(type='text/css', rel='stylesheet', href='../../public/css/style.css', media='screen,projection')
+  link(type='text/css', rel='stylesheet', href='css/style.css', media='screen,projection')
   // Import Google Icon Font
   link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
   // Import materialize.css
-  link(type='text/css', rel='stylesheet', href='../../public/css/materialize.min.css', media='screen,projection')
+  link(type='text/css', rel='stylesheet', href='css/materialize.min.css', media='screen,projection')
   // Let browser know website is optimized for mobile
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
   body.login
@@ -21,17 +21,14 @@ html(lang='en')
         .input-field.col.s6
           input#username.validate(placeholder=' ', type='text')
           label(for='username') USERNAME
-          .input-field.col.s6
-            input#password.validate(placeholder=' ', type='password')
-            label(for='username') PASSWORD
-          .input-field.col.s6
-            input#password.validate(placeholder=' ', type='password')
-            label(for='username') CONFIRM PASSWORD
-          .input-field.col.s6
-            input#password.validate(placeholder=' ', type='text')
-            label(for='username') FIRST NAME
-          .input-field.col.s6
-            input#password.validate(placeholder=' ', type='text')
-            label(for='username') LAST NAME
+        .input-field.col.s6
+          input#password.validate(placeholder=' ', type='text')
+          label(for='username') EMAIL ADDRESS
+        .input-field.col.s6
+          input#password.validate(placeholder=' ', type='password')
+          label(for='username') PASSWORD
+        .input-field.col.s6
+          input#password.validate(placeholder=' ', type='password')
+          label(for='username') CONFIRM PASSWORD
       .button
         a.waves-effect.waves-light.btn Submit
