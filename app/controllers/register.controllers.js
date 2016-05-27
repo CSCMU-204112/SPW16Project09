@@ -1,4 +1,3 @@
-
 var pgp = require('pg-promise')();
 const dbconfig = require('../../config/database');
 var db = pgp(dbconfig);

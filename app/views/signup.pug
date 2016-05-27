@@ -3,33 +3,34 @@ html(lang='en')
   title Sig Up
   head
     meta(charset='utf-8')
-  // style by myself
+  //- style by myself
   link(type='text/css', rel='stylesheet', href='css/style.css', media='screen,projection')
-  // Import Google Icon Font
+  //- Import Google Icon Font
   link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-  // Import materialize.css
+  link(href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah', rel='stylesheet', type='text/css')
+  //- Import materialize.css
   link(type='text/css', rel='stylesheet', href='css/materialize.min.css', media='screen,projection')
-  // Let browser know website is optimized for mobile
+  //- Let browser know website is optimized for mobile
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
   body.login
-    // Import jQuery before materialize.js
+    //- Import jQuery before materialize.js
     script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
     script(type='text/javascript', src='js/materialize.min.js')
     #screen
-      img(src='https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png', width='200px', height='200px')
-      form.registerForm(method = 'post', action= 'signup')
-        .col
-          .input-field.col.s6
-            input#username.validate(placeholder=' ', type='text', name='username')
+      h1(style='font-family:Gloria Hallelujah, cursive; font-size:120px; color:#e68a00') Vibes
+      form.registerForm(method = 'get', action= '../login', style='margin-top:50px')
+        .col(style='width:350px')
+          .input-field.col
+            input#username.validate(placeholder=' ', type='text')
             label(for='username') USERNAME
-          .input-field.col.s6
-            input#password.validate(placeholder=' ', type='text',name='email')
+          .input-field.col
+            input#password.validate(placeholder=' ', type='text')
             label(for='username') EMAIL ADDRESS
-          .input-field.col.s6
-            input#password.validate(placeholder=' ', type='password',name ='password')
+          .input-field.col
+            input#password.validate(placeholder=' ', type='password')
             label(for='username') PASSWORD
-          .input-field.col.s6
-            input#password.validate(placeholder=' ', type='password',name='confirm_pass')
+          .input-field.col
+            input#password.validate(placeholder=' ', type='password')
             label(for='username') CONFIRM PASSWORD
         .button
           button.waves-effect.waves-light.btn.registerButton(style='margin-top:15px') Submit

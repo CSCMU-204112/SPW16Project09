@@ -3,36 +3,37 @@ html(lang='en')
   title Login
   head
     meta(charset='utf-8')
-  // style by myself
+  //- style by myself
   link(type='text/css', rel='stylesheet', href='css/style.css', media='screen,projection')
-  // Import Google Icon Font
+  //- Import Google Icon Font
   link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-  // Import materialize.css
+  link(href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah', rel='stylesheet', type='text/css')
+  //- Import materialize.css
   link(type='text/css', rel='stylesheet', href='css/materialize.min.css', media='screen,projection')
-  // Let browser know website is optimized for mobile
+  //- Let browser know website is optimized for mobile
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
   body.login
-    // Import jQuery before materialize.js
+    //- Import jQuery before materialize.js
     script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
     script(type='text/javascript', src='js/materialize.min.js')
     #screen
-      img(src='https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png', width='200px', height='200px')
-      form.loginForm(method='get', action='home')
+      h1(style='font-family:Gloria Hallelujah, cursive; font-size:120px; color:#e68a00') Vibes
+      form.loginForm(method='get', action='login')
         .row
-          .input-field.col.s6(style='width:350px')
+          .input-field.col(style='width:350px')
             input#username.validate(type='text')
             label(for='username') Username
         .row
-          .input-field.col.s6(style='width:350px')
+          .input-field.col(style='width:350px')
             input#password.validate(type='password')
             label(for='password') Password
         button.button.waves-effect.waves-light.btn.loginButton(type='submit') Log in
       form.signupButton(method='get', action='signup')
         button.button.waves-effect.waves-light.btn.signupButton(type='submit', style='margin-top:15px') Sign up
-    //- script.
-    //-   $('button.loginButton').click( function() {
-    //-     $('form.loginForm').submit();
-    //-   });
-    //-   $('button.signupButton').click( function() {
-    //-     $('form.signupForm').submit();
-    //-   });
+    script.
+      $('button.loginButton').click( function() {
+        $('form.loginForm').submit();
+      });
+      $('button.signupButton').click( function() {
+        $('form.signupForm').submit();
+      });
