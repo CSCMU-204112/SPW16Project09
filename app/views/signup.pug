@@ -32,7 +32,7 @@ html(lang='en')
             input#password.validate(placeholder=' ', type='password')
             label(for='username') CONFIRM PASSWORD
         .button
-          button.waves-effect.waves-light.btn.registerButton Submit
+          button.waves-effect.waves-light.btn.registerButton(style='margin-top:15px') Submit
     script.
       $('button.registerButton').click( function() {
         $('form.registerForm').submit();
