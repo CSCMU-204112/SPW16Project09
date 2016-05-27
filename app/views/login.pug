@@ -14,17 +14,25 @@ html(lang='en')
   body.login
     // Import jQuery before materialize.js
     script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
-    script(type='text/javascript', src='../../public/js/materialize.min.js')
+    script(type='text/javascript', src='js/materialize.min.js')
     #screen
       img(src='https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png', width='200px', height='200px')
-      .row
-        .input-field.col.s6
-          input#username.validate(type='text')
-          label(for='username') Username
-      .row
-        .input-field.col.s6
-          input#password.validate(type='password')
-          label(for='password') Password
-      .button
-        a.waves-effect.waves-light.btn(href='#') Log in
-        a.waves-effect.waves-light.btn(href='./views/signup.pug') Sign up
+      form.loginForm(method = 'get', action= 'home')
+        .row
+          .input-field.col.s6
+            input#username.validate(type='text')
+            label(for='username') Username
+        .row
+          .input-field.col.s6
+            input#password.validate(type='password')
+            label(for='password') Password
+        button.button.waves-effect.waves-light.btn.loginButton(type='submit', href='#') Log in
+      form.signupButton(method = 'get' , action = 'signup')
+        button.button.waves-effect.waves-light.btn.signupButton(type='submit') Sign up
+    script.
+      $('button.loginButton').click( function() {
+        $('form.loginForm').submit();
+      });
+      $('button.signupButton').click( function() {
+        $('form.signupForm').submit();
+      });

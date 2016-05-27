@@ -14,21 +14,26 @@ html(lang='en')
   body.login
     // Import jQuery before materialize.js
     script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
-    script(type='text/javascript', src='../../public/js/materialize.min.js')
+    script(type='text/javascript', src='js/materialize.min.js')
     #screen
       img(src='https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png', width='200px', height='200px')
-      .col
-        .input-field.col.s6
-          input#username.validate(placeholder=' ', type='text')
-          label(for='username') USERNAME
-        .input-field.col.s6
-          input#password.validate(placeholder=' ', type='text')
-          label(for='username') EMAIL ADDRESS
-        .input-field.col.s6
-          input#password.validate(placeholder=' ', type='password')
-          label(for='username') PASSWORD
-        .input-field.col.s6
-          input#password.validate(placeholder=' ', type='password')
-          label(for='username') CONFIRM PASSWORD
-      .button
-        a.waves-effect.waves-light.btn Submit
+      form.registerForm(method = 'get', action= '..')
+        .col
+          .input-field.col.s6
+            input#username.validate(placeholder=' ', type='text')
+            label(for='username') USERNAME
+          .input-field.col.s6
+            input#password.validate(placeholder=' ', type='text')
+            label(for='username') EMAIL ADDRESS
+          .input-field.col.s6
+            input#password.validate(placeholder=' ', type='password')
+            label(for='username') PASSWORD
+          .input-field.col.s6
+            input#password.validate(placeholder=' ', type='password')
+            label(for='username') CONFIRM PASSWORD
+        .button
+          button.waves-effect.waves-light.btn.registerButton Submit
+    script.
+      $('button.registerButton').click( function() {
+        $('form.registerForm').submit();
+      });

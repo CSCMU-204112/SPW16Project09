@@ -1,6 +1,6 @@
-exports.helloWorld = function (req, res) {
-    res.send('Hello world');
-}
+// exports.helloWorld = function (req, res) {
+//     res.send('Hello world');
+// }
 
 exports.loginRender = function (req, res) {
     res.render('login');
