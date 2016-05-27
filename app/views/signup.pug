@@ -17,19 +17,19 @@ html(lang='en')
     script(type='text/javascript', src='js/materialize.min.js')
     #screen
       img(src='https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png', width='200px', height='200px')
-      form.registerForm(method = 'get', action= '..')
+      form.registerForm(method = 'post', action= 'signup')
         .col
           .input-field.col.s6
-            input#username.validate(placeholder=' ', type='text')
+            input#username.validate(placeholder=' ', type='text', name='username')
             label(for='username') USERNAME
           .input-field.col.s6
-            input#password.validate(placeholder=' ', type='text')
+            input#password.validate(placeholder=' ', type='text',name='email')
             label(for='username') EMAIL ADDRESS
           .input-field.col.s6
-            input#password.validate(placeholder=' ', type='password')
+            input#password.validate(placeholder=' ', type='password',name ='password')
             label(for='username') PASSWORD
           .input-field.col.s6
-            input#password.validate(placeholder=' ', type='password')
+            input#password.validate(placeholder=' ', type='password',name='confirm_pass')
             label(for='username') CONFIRM PASSWORD
         .button
           button.waves-effect.waves-light.btn.registerButton(style='margin-top:15px') Submit
